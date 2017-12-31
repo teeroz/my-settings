@@ -1,0 +1,9 @@
+[Unit]
+Description=uWSGI instance to serve myapp
+
+[Service]
+ExecStartPre=-/usr/bin/bash -c 'mkdir -p /run/uwsgi; chown irteam:nginx /run/uwsgi'
+ExecStart=/usr/bin/bash -c 'cd /home1/irteam/myapps/gengoz; source virtualenv/bin/activate; uwsgi --ini uwsgi.ini'
+
+[Install]
+WantedBy=multi-user.target
