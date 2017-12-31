@@ -3,7 +3,6 @@ set hlsearch
 set expandtab
 set ts=2
 set sw=2
-set fdm=marker
 syntax on
 
 " Note: Skip initialization for vim-tiny or vim-small.
